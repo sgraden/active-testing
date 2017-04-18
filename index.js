@@ -1,10 +1,10 @@
 "use strict";
-let express = require('express');
-let app = express();
-let path = require('path');
+var express = require('express');
+var app = express();
+var path = require('path');
 
-var public = path.join(__dirname, '/pub');
-app.use(express.static(public));
+var pub = path.join(__dirname, '/pub');
+app.use(express.static(pub));
 
 app.get('/', (req, res) => {
     res.send("hello world");
@@ -12,4 +12,4 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
     console.log("App listening on 3000");
-})
+});
